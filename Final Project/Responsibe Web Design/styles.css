@@ -1,0 +1,105 @@
+/*Erik Cronell*/
+html {
+	font-family: Verdana, Ariel;
+	background-image: url(images/background.png);
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {margin: 0;
+	padding-top: 3%;
+}
+
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #e68a00;}
+
+ul.topnav li.right {float: right;}
+
+li {
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+h1 {
+	text-align: center;
+	color: #e68a00;
+}
+
+.contact {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+       [class*="col-"] {
+        width: 100%;
+    }
+    body {
+    	padding-top: 25%;
+    }
+
+    h1 {
+    	text-align: center;
+    }
+
+    li {
+    border-bottom: 1px solid #bbb;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+}
+
+/* Iphone 7 */
+@media screen and (min-width: 375px) and (orientation: portrait) {
+   [class*="col-"] {
+        width: 100%;
+    }
+
+    body {
+    	padding-top: 25%;
+    }
+
+    h1 {
+    	text-align: center;
+    }
+    li {
+    border-bottom: 1px solid #bbb;
+}
+
+	li:last-child {
+    border-bottom: none;
+}
+    }
+}

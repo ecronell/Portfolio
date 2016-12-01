@@ -1,0 +1,77 @@
+/*Erik Cronell*/
+[class *= "col-"] {
+  float: left;
+  padding:2%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* setting up the grid */
+.container {
+    width: 1280px;  /* Set the width of the entire website here */
+    margin-right: auto;
+    margin-left: auto; /* margin-left and right are set to auto to center the container */
+}
+
+.row {
+    width: 100%;
+    clear: both; /* Clear creates new styles for the next row */
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.col-12{
+  width:100%;
+}
+.col-11{
+  width: 91.6%;
+}
+.col-10{
+  width: 83.3%;
+}
+.col-9{
+  width: 75%;
+}
+.col-8{
+  width: 66.6%;
+}
+.col-7{
+  width: 58.3%;
+}
+.col-6{
+  width: 50%;
+}
+.col-5{
+  width: 41.6%;
+}
+.col-4{
+  width: 33.3%;
+}
+.col-3{
+  width: 25%;
+}
+.col-2{
+  width: 16.6%;
+}
+.col-1{
+  width: 8.3%;
+}
+
+/* Widescreen Desktop */
+@media screen and (max-width: 1920px) {
+}
+/* Iphone 7 */
+@media screen and (min-width: 375px) and (orientation: portrait) {
+   [class*="col-"] {
+        width: 100%;
+    }
+}
+/* Ipad Air 2 */
+@media screen and (min-width: 768px) and (orientation landscape) {
+   [class*="col-"] {
+        width: 100%;
+    }
+}
