@@ -4,13 +4,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Daily Cosmos</title>
+<link href="style2.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
+</style>
 </head>
 <body>
 <header>
 	<h1 class="sipp">Daily Cosmos</h1>
+	<!-- NAVBAR -->
 	<nav class="bar">
 		<ul>
+			<li><a href="Final Project"
 			<li><a href="Index.html" class="active">Home</a></li>
 			<li><a href="All.html">All</a></li>
 			<div class="dropdown">
@@ -47,6 +58,47 @@
 			<li><a href="Contact.html">Contact</a></li>
 		</ul>
 	</nav>
+	<!-- NAVBAR ON SMALL SCREENS -->
+	<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+	<nav class="bar">
+		<ul class="w3-navbar">
+			<li><a href="Index.html" class="active">Home</a></li>
+			<li><a href="All.html">All</a></li>
+			<div class="dropdown">
+				<li><a onclick="myFunction()" class="dropbtn">Categories</a></li>
+			 <div id="myDropdown" class="dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+				</div>
+			</div>
+			<script>
+				/* When the user clicks on the button,
+				toggle between hiding and showing the dropdown content */
+						function myFunction() {
+								document.getElementById("myDropdown").classList.toggle("show");
+							}
+
+				// Close the dropdown if the user clicks outside of it
+						window.onclick = function(event) {
+							if (!event.target.matches('.dropbtn')) {
+
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+									var openDropdown = dropdowns[i];
+									if (openDropdown.classList.contains('show')) {
+										openDropdown.classList.remove('show');
+									}
+								}
+							}
+						}
+			</script>
+			<li><a href="About.html">About</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+	</nav>
+</div>
 </header>
 <h1>Photo of the Day</h1>
 <img src="Images/PD.jpg" class="pd">
