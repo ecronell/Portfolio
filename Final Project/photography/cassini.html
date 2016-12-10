@@ -14,7 +14,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
 body {background-image: url(images/bg.jpg); background-position: bottom; background-repeat: repeat-y;}
 header {background-image: url(images/dark_embroidery.png);}
-h1 {background-image: url(images/dark_embroidery.png);}
+ul {list-style: none;}
+
+
+.gallery figure {
+  display: inline-block;
+  width: 300px;
+  height: 210px;
+  margin: 15px;
+  position: relative;
+}
+.gallery figcaption {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  padding: 10px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .9em;
+  color: white;
+  opacity: 0;
+  transition: opacity .75s ease-out;
+  font-size: 9px;
+}
+.gallery figure:hover figcaption {
+  opacity: 1;
+}
+
 </style>
 
 </head>
@@ -48,11 +77,35 @@ h1 {background-image: url(images/dark_embroidery.png);}
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-128">
-  <h1 class="w3-margin w3-jumbo w3-text-white">All Photos</h1>
-  <p class="w3-xlarge w3-text-white"></p>
-</header>
+  <h1 class="w3-margin w3-jumbo w3-text-white">Cassini at Saturn</h1>
 
-<h1 class="w3-container w3-text-white w3-center">Providing some of the best official NASA photos taken.</h1>
+
+<div class="gallery w3-image w3-center">
+        <figure>
+           <img src="cassini/1.jpg" alt="1" width="300" height="200">
+                    <figcaption>Infrared Saturn Clouds
+
+This false-color view from NASA's Cassini spacecraft shows clouds in Saturn's northern hemisphere. The view was made using images taken by Cassini's wide-angle camera on July 20, 2016, using a combination of spectral filters sensitive to infrared light at 750, 727 and 619 nanometers.</figcaption>
+        </figure>
+        <figure>
+           <img src="cassini/2.jpg" alt="2" width="300" height="200">
+                  <figcaption>Radar View of Titan's Tallest Mountains
+
+The trio of ridges on Titan known as Mithrim Montes is home to the hazy Saturnian moon's tallest peak.
+</figcaption>
+        </figure>
+        <figure>
+           <img src="cassini/3.jpg" alt="3" width="300" height="200">
+                      <figcaption>Tiny Mimas, Huge Rings
+
+Saturn's icy moon Mimas is dwarfed by the planet's enormous rings.</figcaption>
+        </figure>
+        <figure>
+           <img src="cassini/4.jpg" alt="4" width="300" height="200">
+                      <figcaption>Faint F Ring and Prometheus
+
+Surface features are visible on Saturn's moon Prometheus in this view from NASA's Cassini spacecraft.</figcaption>
+      </div>
 
 
 <script>

@@ -15,6 +15,35 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 body {background-image: url(images/bg.jpg); background-position: bottom; background-repeat: repeat-y;}
 header {background-image: url(images/dark_embroidery.png);}
 ul {list-style: none;}
+
+
+.gallery figure {
+  display: inline-block;
+  width: 300px;
+  height: 210px;
+  margin: 15px;
+  position: relative;
+}
+.gallery figcaption {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  padding: 10px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .9em;
+  color: white;
+  opacity: 0;
+  transition: opacity .75s ease-out;
+  font-size: 9px;
+}
+.gallery figure:hover figcaption {
+  opacity: 1;
+}
+
 </style>
 
 </head>
@@ -48,14 +77,36 @@ ul {list-style: none;}
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-128">
-  <h1 class="w3-margin w3-jumbo w3-text-white">Categories</h1>
-  <p class="w3-xlarge w3-text-white"></p>
-  <ul class="w3-text-white w3-center w3-xlarge w3-container">
-    <li><a href="Spitzer.html">Spitzer Space Telescope</a></li>
-    <li><a href="cassini.html">Cassini at Saturn</a></li>
-    <li><a href="james.html"> James Webb Space Telescope</a></li>
-  </ul>
-</header>
+  <h1 class="w3-margin w3-jumbo w3-text-white">James Webb Space Telescope</h1>
+
+
+
+<div class="gallery w3-image w3-center">
+        <figure>
+           <img src="james/1.jpg" alt="1" width="300" height="200">
+                    <figcaption>Next Generation Space Telescope
+
+NASA engineer Ernie Wright looks on as the first six flight ready James Webb Space Telescope's primary mirror segments are prepped to begin final cryogenic testing at NASA's Marshall Space Flight Center. This represents the first six of 18 segments that will form NASA's James Webb Space Telescope's primary mirror for space observations.</figcaption>
+        </figure>
+        <figure>
+           <img src="james/2.jpg" alt="2" width="300" height="200">
+                  <figcaption>Into the Looking Glass For Webb Telescope Tests
+
+Recently, technicians at NASA's Marshall Space Flight Center in Huntsville, Ala., completed a series of cryogenic tests on six James Webb Space Telescope beryllium mirror segments at the center's X-ray & Cryogenic Facility. During testing, the mirrors were subjected to extreme temperatures dipping to -415 degrees Fahrenheit,.
+</figcaption>
+        </figure>
+        <figure>
+           <img src="james/3.jpg" alt="3" width="300" height="200">
+                      <figcaption>NASA's Webb Telescope Clean Room 'Transporter'
+
+What looks like a teleporter from science fiction being draped over NASA's James Webb Space Telescope, is actually a "clean tent." The clean tent protects Webb from dust and dirt when engineers at NASA's Goddard Space Flight Center </figcaption>
+        </figure>
+        <figure>
+           <img src="james/4.jpg" alt="4" width="300" height="200">
+                      <figcaption>James Webb Space Telescope Mirrors Will Piece Together Cosmic Puzzles
+
+The primary mirror of NASA's James Webb Space Telescope that consists of 18 hexagonal mirrors looks like a giant puzzle piece standing in the massive clean room of NASA's Goddard Space Flight Center in Greenbelt, Maryland. The telescope will help piece together puzzles scientists have been trying to solve throughout the cosmos.</figcaption>
+      </div>
 
 
 

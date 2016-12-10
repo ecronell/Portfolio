@@ -14,7 +14,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
 body {background-image: url(images/bg.jpg); background-position: bottom; background-repeat: repeat-y;}
 header {background-image: url(images/dark_embroidery.png);}
-h1 {background-image: url(images/dark_embroidery.png);}
+ul {list-style: none;}
+
+
+.gallery figure {
+  display: inline-block;
+  width: 300px;
+  height: 210px;
+  margin: 15px;
+  position: relative;
+}
+.gallery figcaption {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  padding: 10px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .9em;
+  color: white;
+  opacity: 0;
+  transition: opacity .75s ease-out;
+  font-size: 9px;
+}
+.gallery figure:hover figcaption {
+  opacity: 1;
+}
+
 </style>
 
 </head>
@@ -48,12 +77,35 @@ h1 {background-image: url(images/dark_embroidery.png);}
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-128">
-  <h1 class="w3-margin w3-jumbo w3-text-white">All Photos</h1>
-  <p class="w3-xlarge w3-text-white"></p>
-</header>
+  <h1 class="w3-margin w3-jumbo w3-text-white">Spitzer Space Telescope</h1>
 
-<h1 class="w3-container w3-text-white w3-center">Providing some of the best official NASA photos taken.</h1>
 
+<div class="gallery w3-image w3-center">
+        <figure>
+           <img src="spitzer/1.jpg" alt="1" width="300" height="200">
+                    <figcaption>Simulated Atmosphere of a Hot Gas Giant
+
+The turbulent atmosphere of a hot, gaseous planet known as HD 80606b is shown in this simulation based on data from NASA's Spitzer Space Telescope.Spitzer measured the whole heating cycle of this planet, determining its coolest (less than 400 degrees Fahrenheit) and hottest (2,000 degrees Fahrenheit) temperatures.</figcaption>
+        </figure>
+        <figure>
+           <img src="spitzer/2.jpg" alt="2" width="300" height="200">
+                  <figcaption>Finding 'Yellowballs' in our Milky Way
+
+Volunteers using the web-based Milky Way Project brought star-forming features nicknamed "yellowballs" to the attention of researchers, who later showed that they are a phase of massive star formation.
+</figcaption>
+        </figure>
+        <figure>
+           <img src="spitzer/3.jpg" alt="3" width="300" height="200">
+                      <figcaption>A Flood of Gas
+
+A new feature in the evolution of galaxies has been captured in this image of galactic interactions. The two galaxies seen here -- NGC 3226 at the top, NGC 3227 at the bottom -- are awash in the remains of a departed third galaxy, cannibalized by the gravity of the surviving galaxies.</figcaption>
+        </figure>
+        <figure>
+           <img src="spitzer/4.jpg" alt="4" width="300" height="200">
+                      <figcaption>Ring of Stellar Fire
+
+A new image from NASA's Spitzer Space Telescope, taken in infrared light, shows where the action is taking place in galaxy NGC 1291.</figcaption>
+      </div>
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button

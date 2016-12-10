@@ -1,71 +1,94 @@
-<!-- Erik Cronell -->
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Daily Cosmos</title>
-<link href="style2.css" rel="stylesheet">
+<title>Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS/font-awesome.css">
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
+body {background-image: url(images/bg.jpg); background-position: bottom; background-repeat: repeat-y;}
+header {background-image: url(images/dark_embroidery.png);}
+
+.gallery figure {
+  display: inline-block;
+  width: 300px;
+  height: 210px;
+  margin: 15px;
+  position: relative;
+}
+.gallery figcaption {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  padding: 10px;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .9em;
+  color: white;
+  opacity: 0;
+  transition: opacity .75s ease-out;
+  font-size: 9px;
+}
+.gallery figure:hover figcaption {
+  opacity: 1;
+}
+
 </style>
+
 </head>
-<body>
-<header>
-	<h1 class="sipp">Daily Cosmos</h1>
-	<nav class="bar">
-		<ul>
-			<li><a href="Index.html">Home</a></li>
-			<li><a href="All.html" class="active">All</a></li>
-			<div class="dropdown">
-  			<li><a onclick="myFunction()" class="dropbtn">Categories</a></li>
- 			 <div id="myDropdown" class="dropdown-content">
-  				  <a href="#">Link 1</a>
-   				  <a href="#">Link 2</a>
-   				  <a href="#">Link 3</a>
-  			</div>
-			</div>
-			<script>
-				/* When the user clicks on the button,
-				toggle between hiding and showing the dropdown content */
-						function myFunction() {
-						    document.getElementById("myDropdown").classList.toggle("show");
-							}
 
-				// Close the dropdown if the user clicks outside of it
-						window.onclick = function(event) {
-						  if (!event.target.matches('.dropbtn')) {
+<body> 
 
-						    var dropdowns = document.getElementsByClassName("dropdown-content");
-						    var i;
-						    for (i = 0; i < dropdowns.length; i++) {
-						      var openDropdown = dropdowns[i];
-						      if (openDropdown.classList.contains('show')) {
-						        openDropdown.classList.remove('show');
-						      }
-						    }
-						  }
-						}
-			</script>
-			<li><a href="About.html">About</a></li>
-			<li><a href="Contact.html">Contact</a></li>
-		</ul>
-	</nav>
+<!-- NAVBAR -->
+<div class="w3-top">
+  <ul class="w3-navbar w3-red w3-card-2 w3-left-align w3-large">
+    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+      <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    </li>
+    <li><a href="home.html" class="w3-padding-large w3-white">Back To Portfolio</a></li>
+    <li class="w3-hide-small"><a href="bleh.html" class="w3-padding-large w3-hover-white">Home</a></li>
+    <li class="w3-hide-small"><a href="all.html" class="w3-padding-large w3-hover-white">All</a></li>
+    <li class="w3-hide-small"><a href="categories.html" class="w3-padding-large w3-hover-white">Categories</a></li>
+    <li class="w3-hide-small"><a href="about.html" class="w3-padding-large w3-hover-white">About</a></li>
+  </ul>
+
+
+<!-- NAVBAR ON SMALL SCREENS -->
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+    <ul class="w3-navbar w3-left-align w3-large w3-black">
+      <li><a class="w3-padding-large" href="bleh.html">Home</a></li>
+      <li><a class="w3-padding-large" href="all.html">All</a></li>
+      <li><a class="w3-padding-large" href="categories.html">Categories</a></li>
+      <li><a class="w3-padding-large" href="about.html">About</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-128">
+  <h1 class="w3-margin w3-jumbo w3-text-white">All Photos</h1>
+  <p class="w3-xlarge w3-text-white"></p>
 </header>
-<div class="gallery">
+
+<div class="gallery w3-image w3-center">
         <figure>
            <img src="Images2/1.jpg" alt="1" width="300" height="200">
-          		  	  <figcaption>Starburst Spider
+                    <figcaption>Starburst Spider
 
 Mars' seasonal cap of carbon dioxide ice has eroded many beautiful terrains as it sublimates (goes directly from ice to vapor) every spring. In the region where the High Resolution Imaging Science Experiment (HiRISE) camera on NASA's Mars Reconnaissance Orbiter took this image on Feb. 4, 2009, we see troughs that form a starburst pattern.</figcaption>
         </figure>
         <figure>
            <img src="Images2/2.jpg" alt="2" width="300" height="200">
-          		 	  <figcaption>On the Shape of Impact Craters
+                  <figcaption>On the Shape of Impact Craters
 
 This image acquired by the HiRISE camera on NASA's Mars Reconnaissance Orbiter shows a roughly 3-kilometer impact crater, formed on the sloping walls of Tithonium Chasma, part of the large Valles Marineris canyon system. The shape of a crater can depend on factors including the angle of impact and the pre-impact slope and topography.
 
@@ -73,7 +96,7 @@ This image acquired by the HiRISE camera on NASA's Mars Reconnaissance Orbiter s
         </figure>
         <figure>
            <img src="Images2/3.jpg" alt="3" width="300" height="200">
-                   	  <figcaption>Frosted Dunes on Mars
+                      <figcaption>Frosted Dunes on Mars
 
 Sand dunes cover much of this terrain, which has large boulders lying on flat areas between the dunes. It is late winter in the southern hemisphere of Mars, and these dunes are just getting enough sunlight to start defrosting their seasonal cover of carbon dioxide. Spots form where pressurized carbon dioxide gas escapes to the surface.</figcaption>
         </figure>
@@ -185,7 +208,7 @@ This Dec. 18, 2015, view of the downwind face of "Namib Dune" on Mars covers 360
                       <figcaption>Curiosity Self-Portrait at Martian Sand Dune
 
 This self-portrait of NASA's Curiosity Mars rover shows the vehicle at "Namib Dune," where the rover's activities included scuffing into the dune with a wheel and scooping samples of sand for laboratory analysis.
-					</figcaption>
+          </figcaption>
 
         </figure>
         <figure>
@@ -193,7 +216,7 @@ This self-portrait of NASA's Curiosity Mars rover shows the vehicle at "Namib Du
                       <figcaption>Jarosite in the Noctis Labyrinthus Region of Mars
 
 This image, acquired on Nov. 24, 2015 by the High Resolution Imaging Science Experiment (HiRISE) camera aboard NASA's Mars Reconnaissance Orbiter, shows the western side of an elongated pit depression in the eastern Noctis Labyrinthus region of Mars. Along the pit's upper wall is a light-toned layered deposit.
-					  </figcaption>
+            </figcaption>
 
         </figure>
         <figure>
@@ -201,7 +224,7 @@ This image, acquired on Nov. 24, 2015 by the High Resolution Imaging Science Exp
                       <figcaption>Wind at Work on the Martian Surface
 
 Wind is one of the most active forces shaping Mars' surface in today's climate. The wind has carved the features we call "yardangs," one of many in this scene, and deposited sand on the floor of shallow channels between them. On the sand, the wind forms ripples and small dunes.
-					</figcaption>
+          </figcaption>
 
         </figure>
         <figure>
@@ -211,5 +234,25 @@ Wind is one of the most active forces shaping Mars' surface in today's climate. 
 
         </figure>
       </div>
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+
+
+
 </body>
+
 </html>
